@@ -41,14 +41,14 @@ console.log(persona);
    Stampa solo il CAP con dot notation.
 */
 
-const utente ={
-   nome: "Matteo",
-   indirizzo: {
-      via: "Largo Santo Stefano",
-      citta: "Anguillara Sabazia",
-      cap: "00061",
-   }
-}
+const utente = {
+  nome: "Matteo",
+  indirizzo: {
+    via: "Largo Santo Stefano",
+    citta: "Anguillara Sabazia",
+    cap: "00061",
+  },
+};
 
 console.log(utente);
 console.log(utente.indirizzo.cap);
@@ -60,7 +60,7 @@ console.log(utente.indirizzo.cap);
    Stampa il valore con bracket notation usando la variabile chiave.
 */
 
-const key = "nome"; 
+const key = "nome";
 console.log(persona[key]); //Legge prima il valore della variabile key = "nome" e poi accede a persona.nome
 
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -75,13 +75,13 @@ let b = 84;
 let c = 36;
 
 if (a > b && a > c) {
-   console.log(`Il numero maggiore è: ${a}`);
-} else if(b > c && b > a){
-   console.log(`Il numero maggiore è: ${b}`);
+  console.log(`Il numero maggiore è: ${a}`);
+} else if (b > c && b > a) {
+  console.log(`Il numero maggiore è: ${b}`);
 } else if (c > a && c > b) {
-   console.log(`Il numero maggiore è: ${c}`);
-} else if (a === b && a === c && b === c){
-   console.log("Pareggio");
+  console.log(`Il numero maggiore è: ${c}`);
+} else if (a === b && a === c && b === c) {
+  console.log("Pareggio");
 }
 
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -96,12 +96,14 @@ if (a > b && a > c) {
 let total;
 total = 49;
 let shipping;
-shipping = 9.90;
+shipping = 9.9;
 
 if (total >= 50) {
-   console.log("Spedizione gratuita");
+  console.log("Spedizione gratuita");
 } else {
-   console.log(`Totale carrello: ${total}€ — Spedizione: ${shipping}€ — Totale finale: ${total + shipping}€`);
+  console.log(
+    `Totale carrello: ${total}€ — Spedizione: ${shipping}€ — Totale finale: ${total + shipping}€`,
+  );
 }
 
 // const ordine = total >= 50 ?"Spedizione gratuita" :
@@ -130,7 +132,6 @@ numeri.unshift(0);
 console.log(numeri);
 console.log(numeri.length);
 
-
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 9 — Carrello con splice
@@ -143,7 +144,7 @@ const carrello = ["Penna", "Quaderno", "Zaino", "Astuccio"];
 console.log(carrello);
 carrello.splice(1, 1);
 console.log(carrello);
-carrello.splice(1, 0, "Diario")
+carrello.splice(1, 0, "Diario");
 console.log(carrello);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
@@ -155,11 +156,10 @@ console.log(carrello);
    Con indexOf: stampa la posizione, o 'Non in carrello'.
 */
 
-const prodotti = ['Penna', 'Quaderno', 'Zaino'];
+const prodotti = ["Penna", "Quaderno", "Zaino"];
 const cercato = "Zaino";
 console.log(`${cercato} è nel carrello: ${prodotti.includes(cercato)}`);
 console.log(prodotti.indexOf(cercato));
-
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -170,13 +170,13 @@ console.log(prodotti.indexOf(cercato));
 */
 
 const utenti = [
-   {nome: "Matteo", eta: 23},
-   {nome: "Giulia", eta: 40},
-   {nome: "Luca", eta: 35},
-]
+  { nome: "Matteo", eta: 23 },
+  { nome: "Giulia", eta: 40 },
+  { nome: "Luca", eta: 35 },
+];
 
 for (let i = 0; i < array.length; i++) {
-      console.log(utenti[i]);  
+  console.log(utenti[i]);
 }
 console.table(utenti);
 
@@ -190,6 +190,26 @@ console.table(utenti);
    - !disponibile → 'nome — esaurito'
 */
 
+const oggetti = [
+  { nome: "Ascia", prezzo: 35, disponibile: true },
+  { nome: "Mouse", prezzo: 9, disponibile: true },
+  { nome: "Tastiera", prezzo: 40, disponibile: true },
+  { nome: "Penna", prezzo: 3, disponibile: false },
+];
+
+console.log(oggetti);
+
+for (let i = 0; i < oggetti.length; i++) {
+  const p = oggetti[i];
+
+  if (p.disponibile && p.prezzo < 10) {
+    console.log(`OFFERTA: ${p.nome} (${p.prezzo}€)`);
+  } else if (p.disponibile && p.prezzo >= 10) {
+    console.log(`${p.nome} (${p.prezzo}€)`);
+  } else if (!p.disponibile) {
+    console.log(`${p.nome} — Prodotto esaurito `);
+  }
+}
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* --EXTRA-- ESERCIZIO 13 — Reverse manuale
