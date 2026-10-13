@@ -139,7 +139,12 @@ console.log(numeri.length);
    Stampa dopo ogni operazione.
 */
 
-
+const carrello = ["Penna", "Quaderno", "Zaino", "Astuccio"];
+console.log(carrello);
+carrello.splice(1, 1);
+console.log(carrello);
+carrello.splice(1, 0, "Diario")
+console.log(carrello);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -150,6 +155,12 @@ console.log(numeri.length);
    Con indexOf: stampa la posizione, o 'Non in carrello'.
 */
 
+const prodotti = ['Penna', 'Quaderno', 'Zaino'];
+const cercato = "Zaino";
+console.log(`${cercato} è nel carrello: ${prodotti.includes(cercato)}`);
+console.log(prodotti.indexOf(cercato));
+
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* ESERCIZIO 11 — Lista utenti
@@ -157,6 +168,17 @@ console.log(numeri.length);
    Con un for, stampa ogni utente: 'Mario (25 anni)'.
    Aggiungi console.table(utenti) alla fine.
 */
+
+const utenti = [
+   {nome: "Matteo", eta: 23},
+   {nome: "Giulia", eta: 40},
+   {nome: "Luca", eta: 35},
+]
+
+for (let i = 0; i < array.length; i++) {
+      console.log(utenti[i]);  
+}
+console.table(utenti);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
