@@ -104,7 +104,7 @@ if (total >= 50) {
    console.log(`Totale carrello: ${total}€ — Spedizione: ${shipping}€ — Totale finale: ${total + shipping}€`);
 }
 
-const ordine = total >= 50 ?"Spedizione gratuita" :
+// const ordine = total >= 50 ?"Spedizione gratuita" :
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -113,11 +113,23 @@ const ordine = total >= 50 ?"Spedizione gratuita" :
    Con un for + if, per ogni elemento stampa 'x è un numero' o 'x non è un numero'.
 */
 
+const array = [15, "Giuseppe", false];
+console.log(array);
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 /* ESERCIZIO 8 — Array dei numeri
    Array vuoto. Aggiungi 1..5 con push. Aggiungi 0 all'inizio con unshift.
    Stampa array e length.
 */
+
+const numeri = [];
+numeri.push(1, 2, 3, 4, 5);
+console.log(numeri);
+
+numeri.unshift(0);
+console.log(numeri);
+console.log(numeri.length);
+
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
@@ -126,6 +138,8 @@ const ordine = total >= 50 ?"Spedizione gratuita" :
    Con splice: rimuovi 'Quaderno', poi inserisci 'Diario' al suo posto.
    Stampa dopo ogni operazione.
 */
+
+
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
