@@ -219,4 +219,9 @@ for (let i = 0; i < oggetti.length; i++) {
    Vincolo: niente metodo .reverse() di JavaScript.
 */
 
+const numb = [1, 2, 3, 4, 5];
+const bmun = numb.toReversed();
+console.log(numb);
+console.log(bmun);
+
 /* SCRIVI QUI LA TUA RISPOSTA */
