@@ -95,7 +95,7 @@ if (a > b && a > c) {
 
 let total;
 total = 49;
-let shipping;
+let shipping;  //va valolrizzzata nel ciclo if
 shipping = 9.9;
 
 if (total >= 50) {
@@ -105,6 +105,8 @@ if (total >= 50) {
     `Totale carrello: ${total}€ — Spedizione: ${shipping}€ — Totale finale: ${total + shipping}€`,
   );
 }
+
+
 
 // const ordine = total >= 50 ?"Spedizione gratuita" :
 
@@ -118,6 +120,14 @@ if (total >= 50) {
 const array = [15, "Giuseppe", false];
 console.log(array);
 
+for (let i = 0; i < array.length; i++) {
+   if(typeof(array[i]) === "number"){
+      console.log(`${array[i]} è un numero`);
+   } else{
+      console.log(`${array[i]} non è un numero`);
+   }
+   
+}
 /* SCRIVI QUI LA TUA RISPOSTA */
 /* ESERCIZIO 8 — Array dei numeri
    Array vuoto. Aggiungi 1..5 con push. Aggiungi 0 all'inizio con unshift.
